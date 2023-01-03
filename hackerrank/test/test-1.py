@@ -1,13 +1,4 @@
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-
-
-@pytest.fixture
-def browser():
-    driver = webdriver.Chrome()
-    yield driver
-    driver.close()
 
 
 def test_login(browser):
@@ -21,3 +12,7 @@ def test_login(browser):
 
     # driver.find_element_by_xpath("//button[.//span[text()='Log In']]").click()
     browser.find_element(by=By.XPATH, value="//button[.//span[text()='Log In']]").click()
+
+    browser.get("https://www.hackerrank.com/my_account")
+
+    #assert test_login.status_code == 200
