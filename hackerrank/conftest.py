@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
 @pytest.fixture
 def browser():
     driver = webdriver.Chrome()
