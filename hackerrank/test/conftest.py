@@ -10,3 +10,8 @@ def browser():
     driver = webdriver.Chrome()
     yield driver
     driver.close()
+
+
+@pytest.fixture
+def client():
+    yield client
